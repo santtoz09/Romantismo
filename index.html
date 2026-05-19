@@ -3,54 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobreviva ao Mal do Século</title>
+  <title>Wiki do Romantismo no Brasil | 2ª Geração (Ultrarromantismo)</title>
+  <meta name="description" content="Wiki informativa sobre o Romantismo no Brasil com foco na Segunda Geração, autores e quiz de revisão." />
+  <meta name="keywords" content="Romantismo brasileiro, Ultrarromantismo, Álvares de Azevedo, Casimiro de Abreu, Fagundes Varella, wiki" />
+  <meta property="og:title" content="Wiki do Romantismo no Brasil" />
+  <meta property="og:description" content="Site estilo wiki com conteúdo informativo sobre a Segunda Geração do Romantismo." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="rain"></div>
-  <main class="app-shell">
-    <section class="screen active" id="start-screen">
-      <p class="kicker">🎭 Jogo literário</p>
-      <h1>Sobreviva ao Mal do Século</h1>
-      <p class="subtitle">Teste seus conhecimentos sobre o ultrarromantismo brasileiro</p>
-      <div class="intro-card">
-        <p>🌙 Entre chuva, lua e poesia, responda perguntas rápidas sobre:</p>
+  <header class="topbar">
+    <div class="brand">Wiki do Romantismo</div>
+    <input id="wiki-search" type="search" placeholder="Pesquisar na wiki" aria-label="Pesquisar" />
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>Romantismo no Brasil</h1>
+      <nav>
+        <button class="nav-item active" data-page="inicio">Visão geral</button>
+        <button class="nav-item" data-page="romantismo">O que foi o Romantismo?</button>
+        <button class="nav-item" data-page="ultra">2ª Geração (Ultrarromantismo)</button>
+        <button class="nav-item" data-page="autores">Autores principais</button>
+        <button class="nav-item" data-page="quiz">Quiz de revisão</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="page active" id="inicio">
+        <h2>Visão geral</h2>
+        <p>Esta wiki apresenta, de forma organizada, o Romantismo no Brasil com foco na Segunda Geração, também conhecida como Ultrarromantismo. O objetivo é facilitar estudo, revisão e consulta rápida.</p>
+        <div class="wiki-note">Dica: use o menu lateral para navegar como em uma wiki tradicional.</div>
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80" alt="Mesa com livros e caderno" loading="eager" />
+      </section>
+
+      <section class="page" id="romantismo">
+        <h2>O que foi o Romantismo?</h2>
+        <p>O Romantismo foi um movimento literário e cultural do século XIX que valorizou emoção, subjetividade e imaginação. No Brasil, também colaborou para a construção de uma identidade nacional no período pós-Independência.</p>
         <ul>
-          <li><strong>Álvares de Azevedo</strong></li>
-          <li><strong>Casimiro de Abreu</strong></li>
-          <li><strong>Fagundes Varela</strong></li>
+          <li>Valorização dos sentimentos e do eu lírico.</li>
+          <li>Idealização do amor, da natureza e da pátria.</li>
+          <li>Linguagem emocional e foco na experiência individual.</li>
+          <li>Relação com o contexto histórico e nacionalismo.</li>
         </ul>
-      </div>
-      <button id="start-btn" class="btn primary">Começar quiz</button>
-      <button id="sound-btn" class="btn ghost" aria-pressed="false">🔉 Efeitos sonoros: desligados</button>
-    </section>
+      </section>
 
-    <section class="screen" id="quiz-screen">
-      <header class="quiz-header">
-        <div>
-          <p class="progress-label">Pergunta <span id="current-question">1</span>/<span id="total-questions">11</span></p>
-          <div class="progress-bar"><span id="progress-fill"></span></div>
+      <section class="page" id="ultra">
+        <h2>2ª Geração do Romantismo (Ultrarromantismo)</h2>
+        <p>A segunda geração romântica brasileira destacou-se pela melancolia, solidão, pessimismo e sofrimento amoroso. O termo “mal do século” resume esse clima emocional intenso e, muitas vezes, pessimista.</p>
+        <div class="tags">
+          <span>Melancolia</span><span>Sofrimento amoroso</span><span>Morte idealizada</span><span>Sentimentalismo</span>
         </div>
-        <p class="score">Pontuação: <span id="score">0</span></p>
-      </header>
+        <p>Essa fase foi importante por aprofundar a subjetividade e transformar emoções humanas em poesia de forte impacto na literatura brasileira.</p>
+      </section>
 
-      <article class="question-card" id="question-card"></article>
-      <div class="actions">
-        <button id="next-btn" class="btn primary" disabled>Próxima</button>
-      </div>
-    </section>
+      <section class="page" id="autores">
+        <h2>Autores principais</h2>
+        <div class="author-list">
+          <article>
+            <h3>Casimiro de Abreu</h3>
+            <p>Poeta da saudade e da infância idealizada.</p>
+            <button class="link-btn" data-modal="casimiro">Ler biografia</button>
+          </article>
+          <article>
+            <h3>Álvares de Azevedo</h3>
+            <p>Principal nome do ultrarromantismo no Brasil.</p>
+            <button class="link-btn" data-modal="azevedo">Ler biografia</button>
+          </article>
+          <article>
+            <h3>Fagundes Varella</h3>
+            <p>Poeta da dor humana, religiosidade e melancolia.</p>
+            <button class="link-btn" data-modal="varella">Ler biografia</button>
+          </article>
+        </div>
+      </section>
 
-    <section class="screen" id="result-screen">
-      <h2>Resultado final</h2>
-      <p id="result-points" class="result-points"></p>
-      <p id="result-message" class="result-message"></p>
-      <div class="result-badges" id="result-badges"></div>
-      <button id="restart-btn" class="btn primary">Jogar novamente</button>
-    </section>
-  </main>
+      <section class="page" id="quiz">
+        <h2>Quiz de revisão</h2>
+        <p>Agora que você navegou pela wiki, revise os principais pontos.</p>
+        <div class="quiz-head">
+          <p id="progress-text">Pergunta 1 de 4</p>
+          <div class="progress"><span id="progress-fill"></span></div>
+        </div>
+        <div id="quiz-card" class="quiz-card"></div>
+        <div class="quiz-actions">
+          <button id="next-btn" class="btn" disabled>Próxima</button>
+          <button id="restart-btn" class="btn secondary hidden">Reiniciar</button>
+        </div>
+        <p id="quiz-result" class="quiz-result"></p>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="bio-modal">
+    <button id="close-modal" aria-label="Fechar biografia">✕</button>
+    <div id="modal-content"></div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
