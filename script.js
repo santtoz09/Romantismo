@@ -20,7 +20,7 @@ quizForm.addEventListener('submit', (event) => {
   });
 
   const result = document.getElementById('quiz-result');
-  result.textContent = `Você acertou ${score} de 4 questões. ${score >= 3 ? 'Excelente revisão para a apresentação!' : 'Revise os autores e tente novamente.'}`;
+  result.textContent = `Você acertou ${score} de 4 questões. ${score >= 3 ? 'Ótimo domínio do conteúdo!' : 'Revise os autores e tente novamente.'}`;
 });
 
 const observer = new IntersectionObserver((entries) => {
