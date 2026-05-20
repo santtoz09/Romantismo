@@ -2,7 +2,7 @@ const bios = {
   casimiro: {
     title: 'Casimiro de Abreu (1839–1860)',
     html: `
-      <p>Casimiro José Marques de Abreu foi um poeta brasileiro da 2ª geração romântica, fase também conhecida como ultrarromântica e marcada pelo “mal do século”. Sua poesia ficou conhecida pela musicalidade, pela saudade e pela sensibilidade direta.</p>
+      <img class='bio-photo' src='https://upload.wikimedia.org/wikipedia/commons/2/26/Casimiro_de_Abreu.jpg' alt='Retrato de Casimiro de Abreu' loading='lazy' /><p>Casimiro José Marques de Abreu foi um poeta brasileiro da 2ª geração romântica, fase também conhecida como ultrarromântica e marcada pelo “mal do século”. Sua poesia ficou conhecida pela musicalidade, pela saudade e pela sensibilidade direta.</p>
       <h4>Biografia resumida e organizada</h4>
       <ul>
         <li><strong>Nascimento e origem:</strong> nasceu em 4 de janeiro de 1839, em Barra de São João (atual distrito de Casimiro de Abreu - RJ), filho de comerciante português.</li>
@@ -22,7 +22,7 @@ const bios = {
   azevedo: {
     title: 'Álvares de Azevedo (1831–1852)',
     html: `
-      <p>Álvares de Azevedo nasceu em São Paulo, em 1831, e é considerado o principal nome do Ultrarromantismo brasileiro. Sua obra combina lirismo, ironia, idealização amorosa e fascínio pela morte, com forte dualidade entre sonho e realidade.</p>
+      <img class='bio-photo' src='https://upload.wikimedia.org/wikipedia/commons/5/56/Alvares_de_Azevedo.jpg' alt='Retrato de Álvares de Azevedo' loading='lazy' /><p>Álvares de Azevedo nasceu em São Paulo, em 1831, e é considerado o principal nome do Ultrarromantismo brasileiro. Sua obra combina lirismo, ironia, idealização amorosa e fascínio pela morte, com forte dualidade entre sonho e realidade.</p>
       <h4>Dados biográficos</h4>
       <ul>
         <li>Estudou na Faculdade de Direito do Largo São Francisco, espaço central da vida intelectual da época.</li>
@@ -39,7 +39,7 @@ const bios = {
   varella: {
     title: 'Fagundes Varella (1841–1875)',
     html: `
-      <p>Fagundes Varella nasceu no Rio de Janeiro, em 1841, e estudou Direito em São Paulo. Sua poesia destaca conflitos humanos profundos e combina dor pessoal, religiosidade e reflexão existencial.</p>
+      <img class='bio-photo' src='https://upload.wikimedia.org/wikipedia/commons/6/63/Fagundes_Varella.jpg' alt='Retrato de Fagundes Varella' loading='lazy' /><p>Fagundes Varella nasceu no Rio de Janeiro, em 1841, e estudou Direito em São Paulo. Sua poesia destaca conflitos humanos profundos e combina dor pessoal, religiosidade e reflexão existencial.</p>
       <h4>Trajetória e contexto</h4>
       <ul>
         <li>A perda do filho impactou profundamente sua produção poética.</li>
