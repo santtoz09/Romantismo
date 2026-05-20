@@ -71,6 +71,7 @@ const quizData = [
 const authorImageCandidates = {
   casimiro: [
     'assets/images/authors/casimiro-de-abreu.jpg',
+    'Casimiro_de_Abreu_(Iconográfico).jpg',
     'Casimiro_de_Abreu_(lc...).jpg',
     'Casimiro_de_Abreu_(litografia).jpg',
     'Casimiro_de_Abreu.jpg',
@@ -78,6 +79,7 @@ const authorImageCandidates = {
   ],
   azevedo: [
     'assets/images/authors/alvares-de-azevedo.jpg',
+    'Alvares_de_Azevedo_(Iconográfico).jpg',
     'Alvares_de_Azevedo_(l...).jpg',
     'Alvares_de_Azevedo_(litografia).jpg',
     'Alvares_de_Azevedo.jpg',
@@ -130,6 +132,11 @@ document.querySelectorAll('[data-modal]').forEach((btn) => {
   });
 });
 document.getElementById('close-modal').addEventListener('click', () => modal.close());
+
+function closeModal() {
+  modal.close();
+  document.body.classList.remove('modal-open');
+}
 
 function closeModal() {
   modal.close();
