@@ -16,7 +16,6 @@ body.modal-open { overflow: hidden; }
   padding: .8rem 1rem; border-bottom: 1px solid var(--line); background: var(--panel);
 }
 .brand { font-weight: 700; color: var(--blue); }
-#wiki-search { flex: 1; max-width: 620px; border: 1px solid var(--line); border-radius: 24px; padding: .7rem .95rem; }
 .layout { display: grid; grid-template-columns: 320px 1fr; min-height: calc(100vh - 61px); }
 .sidebar { border-right: 1px solid var(--line); padding: 1rem; background: var(--panel); }
 .sidebar h1 { margin: .2rem 0 1rem; font-size: 1.3rem; }
@@ -26,6 +25,7 @@ body.modal-open { overflow: hidden; }
 }
 .nav-item:hover { background: #f1f3f4; }
 .nav-item.active { background: var(--blue-soft); border-color: #c6dafc; color: var(--blue); font-weight: 600; }
+.nav-item svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
 .content { padding: 1.3rem 1.6rem; position: relative; overflow: hidden; }
 .page {
   display: none; background: var(--panel); border: 1px solid var(--line); border-radius: 14px;

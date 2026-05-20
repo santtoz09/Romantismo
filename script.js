@@ -83,16 +83,6 @@ function navigateTo(pageId) {
 
 navItems.forEach((btn) => btn.addEventListener('click', () => navigateTo(btn.dataset.page)));
 
-document.getElementById('wiki-search').addEventListener('keydown', (event) => {
-  if (event.key !== 'Enter') return;
-  const value = event.target.value.toLowerCase();
-  if (value.includes('autor')) navigateTo('autores');
-  else if (value.includes('quiz')) navigateTo('quiz');
-  else if (value.includes('ultra') || value.includes('segunda')) navigateTo('ultra');
-  else if (value.includes('visão') || value.includes('inicio')) navigateTo('inicio');
-  else navigateTo('romantismo');
-});
-
 const modal = document.getElementById('bio-modal');
 const modalContent = document.getElementById('modal-content');
 document.querySelectorAll('[data-modal]').forEach((btn) => {
@@ -104,6 +94,14 @@ document.querySelectorAll('[data-modal]').forEach((btn) => {
   });
 });
 document.getElementById('close-modal').addEventListener('click', () => modal.close());
+
+function closeModal() {
+  modal.close();
+  document.body.classList.remove('modal-open');
+}
+
+document.getElementById('close-modal').addEventListener('click', closeModal);
+modal.addEventListener('close', () => document.body.classList.remove('modal-open'));
 
 function closeModal() {
   modal.close();
