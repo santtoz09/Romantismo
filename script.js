@@ -2,7 +2,7 @@ const bios = {
   casimiro: {
     title: 'Casimiro de Abreu (1839–1860)',
     html: `
-      <img class='bio-photo' src='assets/images/authors/casimiro-de-abreu.jpg' alt='Retrato de Casimiro de Abreu' loading='lazy' /><p>Casimiro José Marques de Abreu foi um poeta brasileiro da 2ª geração romântica, fase também conhecida como ultrarromântica e marcada pelo “mal do século”. Sua poesia ficou conhecida pela musicalidade, pela saudade e pela sensibilidade direta.</p>
+      <img class='bio-photo author-photo' data-author='casimiro' src='assets/images/authors/casimiro-de-abreu.jpg' alt='Retrato de Casimiro de Abreu' loading='lazy' /><p>Casimiro José Marques de Abreu foi um poeta brasileiro da 2ª geração romântica, fase também conhecida como ultrarromântica e marcada pelo “mal do século”. Sua poesia ficou conhecida pela musicalidade, pela saudade e pela sensibilidade direta.</p>
       <h4>Biografia resumida e organizada</h4>
       <ul>
         <li><strong>Nascimento e origem:</strong> nasceu em 4 de janeiro de 1839, em Barra de São João (atual distrito de Casimiro de Abreu - RJ), filho de comerciante português.</li>
@@ -22,7 +22,7 @@ const bios = {
   azevedo: {
     title: 'Álvares de Azevedo (1831–1852)',
     html: `
-      <img class='bio-photo' src='assets/images/authors/alvares-de-azevedo.jpg' alt='Retrato de Álvares de Azevedo' loading='lazy' /><p>Álvares de Azevedo nasceu em São Paulo, em 1831, e é considerado o principal nome do Ultrarromantismo brasileiro. Sua obra combina lirismo, ironia, idealização amorosa e fascínio pela morte, com forte dualidade entre sonho e realidade.</p>
+      <img class='bio-photo author-photo' data-author='azevedo' src='assets/images/authors/alvares-de-azevedo.jpg' alt='Retrato de Álvares de Azevedo' loading='lazy' /><p>Álvares de Azevedo nasceu em São Paulo, em 1831, e é considerado o principal nome do Ultrarromantismo brasileiro. Sua obra combina lirismo, ironia, idealização amorosa e fascínio pela morte, com forte dualidade entre sonho e realidade.</p>
       <h4>Dados biográficos</h4>
       <ul>
         <li>Estudou na Faculdade de Direito do Largo São Francisco, espaço central da vida intelectual da época.</li>
@@ -39,7 +39,7 @@ const bios = {
   varella: {
     title: 'Fagundes Varella (1841–1875)',
     html: `
-      <img class='bio-photo' src='assets/images/authors/fagundes-varella.jpg' alt='Retrato de Fagundes Varella' loading='lazy' /><p>Fagundes Varella nasceu no Rio de Janeiro, em 1841, e estudou Direito em São Paulo. Sua poesia destaca conflitos humanos profundos e combina dor pessoal, religiosidade e reflexão existencial.</p>
+      <img class='bio-photo author-photo' data-author='varella' src='assets/images/authors/fagundes-varella.jpg' alt='Retrato de Fagundes Varella' loading='lazy' /><p>Fagundes Varella nasceu no Rio de Janeiro, em 1841, e estudou Direito em São Paulo. Sua poesia destaca conflitos humanos profundos e combina dor pessoal, religiosidade e reflexão existencial.</p>
       <h4>Trajetória e contexto</h4>
       <ul>
         <li>A perda do filho impactou profundamente sua produção poética.</li>
@@ -67,6 +67,40 @@ const quizData = [
   { q: '8) Qual alternativa resume melhor a importância da 2ª geração para a literatura brasileira?', o: ['Eliminou a subjetividade romântica', 'Introduziu exclusivamente temas políticos', 'Consolidou a expressão poética da crise interior e da sensibilidade melancólica', 'Substituiu a poesia por narrativa histórica documental'], a: 2 }
 ];
 
+
+const authorImageCandidates = {
+  casimiro: [
+    'assets/images/authors/casimiro-de-abreu.jpg',
+    'Casimiro_de_Abreu_(lc...).jpg',
+    'Casimiro_de_Abreu_(litografia).jpg',
+    'Casimiro_de_Abreu.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/2/26/Casimiro_de_Abreu.jpg'
+  ],
+  azevedo: [
+    'assets/images/authors/alvares-de-azevedo.jpg',
+    'Alvares_de_Azevedo_(l...).jpg',
+    'Alvares_de_Azevedo_(litografia).jpg',
+    'Alvares_de_Azevedo.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/5/56/Alvares_de_Azevedo.jpg'
+  ],
+  varella: [
+    'assets/images/authors/fagundes-varella.jpg',
+    'Fagundes_Varella.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/6/63/Fagundes_Varella.jpg'
+  ]
+};
+
+function tryImageCandidates(img, candidates, index = 0) {
+  if (!img || !candidates || index >= candidates.length) return;
+  const src = candidates[index];
+  img.onerror = () => tryImageCandidates(img, candidates, index + 1);
+  img.src = src;
+}
+
+document.querySelectorAll('.author-photo').forEach((img) => {
+  const key = img.dataset.author;
+  tryImageCandidates(img, authorImageCandidates[key]);
+});
 const navItems = document.querySelectorAll('.nav-item');
 
 function navigateTo(pageId) {
@@ -89,6 +123,8 @@ document.querySelectorAll('[data-modal]').forEach((btn) => {
   btn.addEventListener('click', () => {
     const info = bios[btn.dataset.modal];
     modalContent.innerHTML = `<h3>${info.title}</h3>${info.html}`;
+    const modalPhoto = modalContent.querySelector('.author-photo');
+    if (modalPhoto) tryImageCandidates(modalPhoto, authorImageCandidates[modalPhoto.dataset.author]);
     document.body.classList.add('modal-open');
     modal.showModal();
   });
