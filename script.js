@@ -100,9 +100,6 @@ function closeModal() {
   document.body.classList.remove('modal-open');
 }
 
-document.getElementById('close-modal').addEventListener('click', closeModal);
-modal.addEventListener('close', () => document.body.classList.remove('modal-open'));
-
 function closeModal() {
   modal.close();
   document.body.classList.remove('modal-open');
