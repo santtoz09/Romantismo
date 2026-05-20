@@ -129,6 +129,12 @@ document.querySelectorAll('[data-modal]').forEach((btn) => {
     modal.showModal();
   });
 });
+document.getElementById('close-modal').addEventListener('click', () => modal.close());
+
+function closeModal() {
+  modal.close();
+  document.body.classList.remove('modal-open');
+}
 
 function closeModal() {
   modal.close();
