@@ -57,14 +57,14 @@ const bios = {
 };
 
 const quizData = [
-  { q: '1) Qual característica diferencia mais a 2ª geração romântica da 1ª geração no Brasil?', o: ['Ênfase no indianismo e herói nacional', 'Predomínio de subjetividade melancólica e conflito interior', 'Foco em crítica social abolicionista', 'Valorização do racionalismo clássico'], a: 1 },
-  { q: '2) Em relação ao “mal do século”, a interpretação mais adequada é:', o: ['Uma epidemia literal entre escritores', 'Uma metáfora para angústia, tédio existencial e pessimismo', 'Um movimento político partidário', 'Uma escola científica do século XIX'], a: 1 },
-  { q: '3) Qual alternativa descreve melhor a poesia de Casimiro de Abreu?', o: ['Linguagem satírica e crítica urbana direta', 'Tom épico nacionalista com exaltação indígena', 'Musicalidade, saudade da infância e afetividade', 'Experimentalismo formal e vanguarda'], a: 2 },
-  { q: '4) Em Álvares de Azevedo, o dualismo aparece como:', o: ['Razão absoluta contra fé religiosa', 'Contraste entre idealização amorosa e desejo, sonho e realidade', 'Conflito entre campo e cidade industrial', 'Defesa da objetividade jornalística'], a: 1 },
-  { q: '5) Qual obra está corretamente associada a Fagundes Varella?', o: ['Cântico do Calvário', 'Iracema', 'Memórias Póstumas de Brás Cubas', 'Os Sertões'], a: 0 },
-  { q: '6) A recorrência de morte, noite e solidão no Ultrarromantismo indica principalmente:', o: ['Desinteresse por emoções pessoais', 'Aprofundamento da subjetividade e dramatização da existência', 'Rejeição total da poesia lírica', 'Preocupação central com progresso tecnológico'], a: 1 },
-  { q: '7) Sobre o contexto dos autores da 2ª geração, é correto afirmar que:', o: ['Estavam afastados da influência europeia', 'Produziram em ambiente intelectual ligado a faculdades e círculos literários', 'Tinham foco majoritário em teatro cômico popular', 'Recusavam completamente a publicação em jornais'], a: 1 },
-  { q: '8) Qual alternativa resume melhor a importância da 2ª geração para a literatura brasileira?', o: ['Eliminou a subjetividade romântica', 'Introduziu exclusivamente temas políticos', 'Consolidou a expressão poética da crise interior e da sensibilidade melancólica', 'Substituiu a poesia por narrativa histórica documental'], a: 2 }
+  { q: '1) O que foi o Romantismo na literatura?', o: ['Um movimento que valorizou sentimentos e imaginação', 'Uma fase focada só em fórmulas científicas', 'Um período sem poesia no Brasil', 'Uma escola que rejeitava emoções'], a: 0 },
+  { q: '2) O que marcou a 2ª geração do Romantismo?', o: ['Razão e lógica', 'Melancolia e sentimentos intensos', 'Tecnologia e ciência', 'Humor e sátira'], a: 1 },
+  { q: '3) O que era o “mal do século”?', o: ['Um movimento político', 'Tristeza, melancolia e pessimismo', 'Uma guerra no Brasil', 'Um estilo de pintura'], a: 1 },
+  { q: '4) Quem escreveu "Lira dos Vinte Anos"?', o: ['Fagundes Varella', 'Gonçalves Dias', 'Álvares de Azevedo', 'Machado de Assis'], a: 2 },
+  { q: '5) Qual autor ficou conhecido pela saudade da infância?', o: ['Casimiro de Abreu', 'José de Alencar', 'Castro Alves', 'Álvares de Azevedo'], a: 0 },
+  { q: '6) Qual obra está ligada a Fagundes Varella?', o: ['Cântico do Calvário', 'Iracema', 'Dom Casmurro', 'O Cortiço'], a: 0 },
+  { q: '7) Quais temas aparecem muito na 2ª geração?', o: ['Alegria constante e humor', 'Morte, solidão e sofrimento amoroso', 'Apenas política e economia', 'Somente aventuras históricas'], a: 1 },
+  { q: '8) O que o quiz ensina sobre os autores dessa fase?', o: ['Que todos escreviam do mesmo jeito', 'Que a fase valoriza emoção, saudade e conflito interior', 'Que o mais importante é decorar datas', 'Que não existiam obras conhecidas'], a: 1 }
 ];
 
 
