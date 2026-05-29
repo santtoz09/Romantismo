@@ -4,13 +4,14 @@ const bios = {
     html: `
       <img class='bio-photo author-photo' data-author='casimiro' src='assets/images/authors/casimiro-de-abreu.jpg' alt='Retrato de Casimiro de Abreu' loading='lazy' /><p>Casimiro José Marques de Abreu foi um poeta brasileiro da 2ª geração romântica, fase também conhecida como ultrarromântica e marcada pelo “mal do século”. Sua poesia ficou conhecida pela musicalidade, pela saudade e pela sensibilidade direta.</p>
       <h4>Biografia resumida e organizada</h4>
-      <ul>
-        <li><strong>Nascimento e origem:</strong> nasceu em 4 de janeiro de 1839, em Barra de São João (atual distrito de Casimiro de Abreu - RJ), filho de comerciante português.</li>
-        <li><strong>Vida no Rio:</strong> aos 15 anos, foi enviado ao Rio de Janeiro para atuar no comércio, mas não se identificou com a rotina e aproximou-se da literatura.</li>
-        <li><strong>Boemia e jornais:</strong> integrou círculos literários e colaborou em periódicos como <em>A Marmota Fluminense</em> e <em>Correio Mercantil</em>.</li>
-        <li><strong>Viagem a Portugal:</strong> em 1857 foi para Lisboa, vivência marcada por saudade intensa do Brasil e agravamento de sua saúde.</li>
-        <li><strong>Volta e morte precoce:</strong> retornou ao Brasil em 1859 e faleceu em 1860, com apenas 21 anos.</li>
-      </ul>
+      <p>
+
+Casimiro José Marques de Abreu nasceu em Barra de São João, no Rio de Janeiro, filho de um comerciante português. Ainda jovem, foi enviado para trabalhar no comércio, mas não se identificou com a área e se interessou cada vez mais pela literatura.
+
+Em 1853, viajou para Portugal, onde aprofundou sua carreira literária e escreveu grande parte de seus poemas e obras. Em Lisboa, teve destaque com a peça “Camões e o Jau” (1856) e produziu muitos textos que depois fariam parte de “As Primaveras” (1859), seu único livro.
+
+Suas obras são marcadas pela saudade, sentimentalismo e valorização da infância, características da segunda geração do Romantismo brasileiro. Casimiro morreu em 1860, aos 21 anos, vítima de tuberculose.
+</p>
       <h4>Importância na literatura</h4>
       <ul>
         <li>Consolidou temas de saudade e memória da infância na poesia brasileira.</li>
