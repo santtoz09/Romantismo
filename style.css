@@ -90,4 +90,4 @@ blockquote { border-left: 4px solid var(--blue); padding-left: .7rem; color: #34
   h2 { font-size: 1.6rem; }
 }
 
-.bio-photo { width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); margin: .4rem 0 .9rem; }
+.bio-photo { width: min(100%, 420px); height: auto; max-height: none; aspect-ratio: auto; object-fit: contain; display: block; border-radius: 12px; border: 1px solid var(--line); margin: .4rem auto .9rem; }
